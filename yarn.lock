@@ -4975,6 +4975,11 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+netlify-auth-providers@^1.0.0-alpha5:
+  version "1.0.0-alpha5"
+  resolved "https://registry.yarnpkg.com/netlify-auth-providers/-/netlify-auth-providers-1.0.0-alpha5.tgz#f0ce642fe5534f04a1d539ca847c907dd20819c8"
+  integrity sha512-V4tqW60NEOYdd7QUWotB+XeMbw/kayi4Sbm67hSMWibXHG7xiRUp6+VEB8CmBt7/kb3HTw7+mQSwF7YR9hRaSQ==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

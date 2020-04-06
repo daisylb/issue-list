@@ -2,10 +2,11 @@
   "name": "issue-list",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "MPL",
   "dependencies": {
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
+    "netlify-auth-providers": "^1.0.0-alpha5",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
