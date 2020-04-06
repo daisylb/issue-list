@@ -1,0 +1,34 @@
+query GetRepoData {
+  repository(owner: "excitedleigh", name: "pyconau-2020") {
+    nameWithOwner
+    milestones(
+      first: 100
+      orderBy: { field: DUE_DATE, direction: ASC }
+      states: [OPEN]
+    ) {
+      nodes {
+        ...MilestoneInfo
+      }
+    }
+  }
+}
+
+fragment MilestoneInfo on Milestone {
+  title
+  dueOn
+  issues(first: 100, filterBy: {states: [OPEN]}) {
+    nodes {
+      ...IssueInfo
+    }
+  }
+}
+
+fragment IssueInfo on Issue {
+  title
+  url
+  assignees(first: 10) {
+    nodes {
+      name
+    }
+  }
+}

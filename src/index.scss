@@ -1,0 +1,66 @@
+@use 'sass:math';
+@import url('https://rsms.me/inter/inter.css');
+@import 'reset-css/sass/reset';
+
+@mixin scale($n){
+    font-size: math.pow(4/3, $n) * 1rem;
+    line-height: 1 + math.pow(0.5, $n+1);
+}
+
+body {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 66rem;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #000;
+}
+
+h1 {
+    @include scale(3);
+}
+
+h2 {
+    @include scale(2);
+}
+
+a {
+    color: inherit;
+    text-decoration-color: blue;
+    text-decoration-skip: ink;
+    text-decoration-thickness: 1px;
+}
+
+div.issue {
+    margin-bottom: 0.5em;
+    padding-left: 28px;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &:before {
+        vertical-align: -2px;
+        content: "";
+        border: 2px solid black;
+        border-radius: 4px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: -28px;
+        margin-right: 8px; 
+    }
+    small {
+        margin-left: 8px;
+        font-size: 15px;
+        color: #666;
+    }
+}

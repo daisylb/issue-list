@@ -1,0 +1,16 @@
+overwrite: true
+schema:
+  - "https://api.github.com/graphql":
+      headers:
+        Authorization: "bearer bc6d5bd0081f05c96350cef764435c0172b4e47c"
+documents: "src/**.graphql"
+generates:
+  "src/graphql.gen.tsx":
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+    config:
+      documentMode: 'documentNode'
+      withComponent: false
+      withHooks: true

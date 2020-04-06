@@ -1,0 +1,34 @@
+{
+  "name": "issue-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^14.6.0",
+    "graphql-tag": "^2.10.3",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "reset-css": "^5.0.1",
+    "urql": "^1.9.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.13.0",
+    "@graphql-codegen/introspection": "1.13.0",
+    "@graphql-codegen/typescript": "1.13.0",
+    "@graphql-codegen/typescript-operations": "1.13.0",
+    "@graphql-codegen/typescript-urql": "^1.13.0",
+    "@types/react": "^16.9.31",
+    "@types/react-dom": "^16.9.6",
+    "concurrently": "^5.1.0",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start": "concurrently npm:gql:watch npm:parcel:serve",
+    "parcel": "parcel build src/index.html",
+    "parcel:serve": "parcel src/index.html",
+    "gql": "graphql-codegen --config codegen.yml",
+    "gql:watch": "graphql-codegen --config codegen.yml --watch"
+  }
+}
