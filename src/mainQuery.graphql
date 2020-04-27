@@ -1,5 +1,5 @@
 query GetRepoData {
-  repository(owner: "excitedleigh", name: "pyconau-2020") {
+  repository(owner: "pyconau", name: "2020") {
     nameWithOwner
     milestones(
       first: 100
